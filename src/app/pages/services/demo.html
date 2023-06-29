@@ -1,0 +1,235 @@
+<button class="btn btn-secondary" style="margin-right: 5px; margin-left: 5px;" (click)="printLayer1(
+          '
+           <html>
+            <head>
+                <link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot;
+                    integrity=&quot;sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm&quot; crossorigin=&quot;anonymous&quot;>
+                <script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;
+                    integrity=&quot;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&quot;
+                    crossorigin=&quot;anonymous&quot;></script>
+                <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js&quot;
+                    integrity=&quot;sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q&quot;
+                    crossorigin=&quot;anonymous&quot;></script>
+                <script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js&quot;
+                    integrity=&quot;sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl&quot;
+                    crossorigin=&quot;anonymous&quot;></script>
+
+                <style>
+                    table.printTable1 tr,
+                    td {
+                        border: 1px solid rgb(172, 172, 172);;
+                        border-bottom: 0;
+                    }
+
+                    .border-0 {
+                        border: 0;
+                    }
+
+                    .border-top-0 {
+                        border-top: 0;
+                    }
+
+                    .border-bottom-0 {
+                        border-bottom: 0;
+                    }
+
+                    .border-left-0 {
+                        border-left: 0;
+                    }
+
+                    .border-gray {
+                        border: 1px solid rgb(172, 172, 172);;
+                    }
+
+                    .border-left-gray {
+                        border-left: 1px solid rgb(172, 172, 172);;
+                    }
+
+                    .border-top-gray {
+                        border-top: 1px solid rgb(172, 172, 172);;
+                    }
+
+                    .font-bold {
+                        font-weight: bold;
+                    }
+
+                    .font-size-20 {
+                        font-size: 20px;
+                    }
+
+                    .padding-0 {
+                        padding: 0;
+                    }
+
+                    .margin-0 {
+                        margin: 0;
+                    }
+                    .padding-top-5-p {
+                        margin: 5%;
+                    }
+
+                    .width-100 {
+                        width: 100%;
+                    }
+
+                    .font-size-inherit {
+                        font-size: inherit;
+                    }
+
+                    .text-align-right {
+                        text-align: right;
+                    }
+
+                    .text-align-center {
+                        text-align: center;
+                    }
+
+                    table.printTable1 thead tr.bg-color {
+                        background-color: rgba(165, 208, 211, 0.562);
+                    }
+
+                    body.printBody1 {
+                        font-size: 10pt;
+                    }
+                    * {
+                        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+                        color-adjust: exact !important;                 /*Firefox*/
+                    }
+                </style>
+            </head>
+
+            <body class=&quot;printBody1 border-0&quot;>
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class=&quot;col-lg-11 border-0 container&quot;>
+                    <div class=&quot;col-lg-12 row&quot;>
+                        <div class=&quot;col-lg-6 font-bold&quot; style=&quot; line-height: 50px; &quot;>
+                            თარიღი:13.09.2021
+                        </div>
+                        <div class=&quot;col-lg-6 text-align-right&quot; style=&quot; margin-top:-80px; &quot;>
+                         <img src=&quot;https://drive.google.com/uc?export=view&id=1Wgg8DAs18yuwWRlcsdlf002CRAKcAcUI&quot;>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class=&quot;col-lg-12 border-0 row text-align-center&quot; style=&quot;margin-left: 0;&quot;>
+                    <div class=&quot;col-lg-2&quot;></div>
+                    <div class=&quot;col-lg-8 font-bold font-size-20&quot;>ანგარიშ-ფაქტურა N706 </div>
+                    <div class=&quot;col-lg-2&quot;></div>
+                </div>
+                <br />
+                <div class=&quot;col-lg-11 container font-bold&quot;>
+                    ორგანიზაცია საჭიროებისამებრ წარსადგენად
+                </div>
+                <br />
+                <div class=&quot;col-lg-11 container border-gray border-bottom-0 font-bold&quot;>
+                    <div>
+                        <div>პაციენტი:ქეთევან თიღილაური</div>
+                        <div>დაბადების თარიღი: 06.11.1981</div>
+                        <div> პირადი N: 12001020096</div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+
+                </div>
+                <div class=&quot;col-lg-11 container border-0 padding-0&quot;>
+                    <table class=&quot;border-0 width-100 margin-0 font-size-inherit printTable1&quot; id=&quot;print-table1&quot;>
+                        <thead class=&quot;border-0 border-top-0&quot;>
+                            <tr class=&quot;bg-color text-align-center&quot;>
+                                <th>
+                                    დანიშნულება (NCSP) &nbsp;
+
+
+                                </th>
+
+                                <th>
+                                    &nbsp; რაოდენობა &nbsp;
+                                </th>
+                                <th>
+                                    ერთ. ფასი &nbsp;
+                                </th>
+                                <th class=&quot;border-left-gray&quot;>
+                                    თანხა &nbsp;
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class=&quot;text-align-center&quot;>
+                            <tr>
+                                <td>
+                                    მუხლის სახსრის პასიური დამუშავება
+
+                                </td>
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    30
+                                </td>
+                                <td class=&quot;text-align-right&quot;>
+                                    90.00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    სამკურნალო ვარჯიში
+                                </td>
+                                <td>
+                                    5
+                                </td>
+                                <td>
+                                    30
+                                </td>
+                                <td class=&quot;text-align-right&quot;>
+                                    150.00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan=&quot;3&quot;>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+
+                            </tr>
+                            <tr class=&quot;font-bold border-left-0&quot;>
+
+                                <td class=&quot;border-left-0 text-align-right&quot; colspan=&quot;3&quot;>
+                                    ჯამი: &nbsp;
+                                </td>
+                                <td class=&quot;border-gray text-align-right&quot;>
+                                    240.00 ₾
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <div class=&quot;col-lg-11 container border-gray&quot;>
+                    <div>დასახელება: შპს &quot;ფიზიოთერაპიისა და სპორტული ტრამვის კლინიკა&quot;</div>
+                    <div>ბანკი: სს &quot;საქართველოს ბანკი&quot; </div>
+                    <div> ბანკის კოდი: BAGAGE22</div>
+                    <div> ა/ა: GE88BG0000000903897800 </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class=&quot;col-lg-11 container border-0 font-bold&quot;>
+                    <div>პასუხისმგებელი პირი: &nbsp;</div>
+
+                </div>
+            </body> </html>')">
+            ა/ფაქტურის ბეჭდვა
+        </button>
+
+        

@@ -1,0 +1,189 @@
+<div id="demo" class="container">
+
+    <div class="title">
+        <h1>Purchas order</h1>
+        <br>
+        <div class="address">
+            <p style="color: gray;">Vendor</p>
+            <p style="font-weight: 500;">Tailspin <br> 234 Eleventh street <br> Marietta, GA 30008 <br> USA</p>
+        </div>
+        <div class="ident">
+            <h2>Number: 000002</h2>
+            <p style="font-weight: 500;">Order date: 15.08.2012 <br> delivery terms: FOB | Site 1</p>
+        </div>
+    </div>
+
+    <p-table [value]="tableData" styleClass="p-datatable-gridlines" [tableStyle]="{'min-width': '50rem', 'margin-top': '70px'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th></th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Unite</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Line Amount</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-order>
+            <tr> <TD>{{order.id}}</TD>
+                <td>{{order.description}}</td>
+                <td>{{order.qty}}</td>
+                <td>{{order.unite}}</td>
+                <td>{{order.price}}</td>
+                <td>{{order.discount}}</td>
+                <td>{{order.amount}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <br>
+    <p-table [value]="sumData" styleClass="p-datatable-gridlines" [tableStyle]="{'max-width': '28rem', 'margin-left': 'auto', 
+    'margin-right': '0' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Subtotal</th>
+                <th>Tax</th>
+                <th>Total</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-num>
+            <tr> 
+                <td>{{num.subtotal}}</td>
+                <td>{{num.tax}}</td>
+                <td>{{num.total}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+    <div class="delivery-address">
+        <p style="color: gray;">Delivery address: <br> 213 South Street, Gate 1 <br> Galvin, WA 98544 <br> USA <br> Purch order footer text</p>
+        <textarea rows="4" cols="35" pInputTextarea placeholder="Notes" style="margin-top: 30px;"></textarea>
+
+    </div>
+
+    <div class="lst-part">
+        <p class="page" style="color: gray; margin-top: 50px;">Page | 1 <br> 0/7/21/2015 1:06:00 PM</p>
+        <p class="pers" style="color: gray; text-align: end; margin-top: -50px;">Requester <br> Kevin Cook, Sales Manager</p>
+    </div>
+     <br>
+     <br>
+
+</div>
+
+<!-- <div class="container">
+    <button printSectionId="demo" type="button" class="btn btn-primary" ngxPrint>Print</button>
+
+</div> -->
+
+<div class="container">
+
+<button class="btn btn-primary" style="margin-right: 5px; margin-left: 5px;" (click)="printLayer1 ('
+    <html>
+        <head>
+            <style>
+
+                table, th, td {
+                    border:1px solid black;
+                }
+                h1{
+                    font-weight: 500;
+                    margin-top: 50px;
+                }
+                
+                .delivery-address{
+                    margin-top: 35px;
+                }
+                body.printBody1 {
+                    font-size: 10pt;
+                }
+                * {
+                    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+                    color-adjust: exact !important;                 /*Firefox*/
+                }
+            </style>
+        </head>
+        <body class=&quot;printBody1 border-0&quot;>
+            <div class=&quot;col-lg-11 border-0 container&quot;>
+                <div class=&quot;title&quot;>
+                    <h1>Purchas order</h1>
+                    <br>
+                    <div class=&quot;address&quot;>
+                        <p style=&quot;color: gray;&quot;>Vendor</p>
+                        <p style=&quot;font-weight: 500;&quot;>Tailspin <br> 234 Eleventh street <br> Marietta, GA 30008 <br> USA</p>
+                    </div>
+                    <div class=&quot;ident&quot;>
+                        <h2>Number: 000002</h2>
+                        <p style=&quot;font-weight: 500;&quot;>Order date: 15.08.2012 <br> delivery terms: FOB | Site 1</p>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Description</th>
+                    <th>Qty</th>
+                    <th>Unite</th>
+                    <th>Price</th>
+                    <th>Discount</th>
+                    <th>Line Amount</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Enclouser</td>
+                  <td>2,480</td>
+                  <td>ea</td>
+                  <td>79.99 USD</td>
+                  <td>0.00 USD</td>
+                  <td>198,375.20 USD</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Enclouser</td>
+                    <td>12</td>
+                    <td>ea</td>
+                    <td>79.99 USD</td>
+                    <td>0.00 USD</td>
+                    <td>959.88 USD</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Enclouser</td>
+                    <td>1,480</td>
+                    <td>ea</td>
+                    <td>15.15 USD</td>
+                    <td>0.00 USD</td>
+                    <td>22,422.00 USD</td>
+                  </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                  <th>Subtotal</th>
+                  <th>Tax</th>
+                  <th>Total</th>
+                </tr>
+                <tr>
+                  <td>221,757,08 USD</td>
+                  <td>13.859.82 USD</td>
+                  <td>235,616,90 USD</td>
+                </tr>
+            </table>
+
+            <div class=&quot;delivery-address&quot;>
+                <p style=&quot;color: gray;&quot;>Delivery address: <br> 213 South Street, Gate 1 <br> Galvin, WA 98544 <br> USA <br> Purch order footer text</p>
+                <textarea rows=&quot;4&quot; cols=&quot;35&quot; pInputTextarea placeholder=&quot;Notes&quot; style=&quot;margin-top: 30px;&quot;></textarea>
+        
+            </div>
+        
+            <div class=&quot;lst-part&quot;>
+                <p class=&quot;page&quot; style=&quot;color: gray; margin-top: 50px;&quot;>Page | 1 <br> 0/7/21/2015 1:06:00 PM</p>
+                <p class=&quot;pers&quot; style=&quot;color: gray;&quot;>Requester <br> Kevin Cook, Sales Manager</p>
+            </div>
+        </body>
+    </html>
+')">
+print
+</button>
+</div>
+
+
